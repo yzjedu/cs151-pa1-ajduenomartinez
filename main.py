@@ -1,6 +1,13 @@
+# Programmers:  Antonio Dueno
+# Course:  CS151, Zelalem Yalew
+# Due Date: 10/5/2024
+# Programming Assignment: 1
+# Problem Statement: You are creating a text adventure game!  In this game, the user gives input that affects the path of the story.
+# Data In: Player choice on what do do / where to go in any given prompt
+# Data Out: Dialogue directly resulting from players choice
+# Credits: Class discussion.
 
-
-
+#Intro
 print("You wake up in an elevator, with no memory of how you got there. As you stand up, \nyou begin to try and retrace your steps, but"
       "you cannot remember how you came to be \ninside the elevator. You begin to ask yourself questions to try and jog your memory.")
 name=str(input("What is your name?: "))
@@ -22,7 +29,6 @@ if intro == '2':
     print('You have decided to stay in the elevator. Going outside frightens you, and the \nsmall, cozy elevator brings you comfort. '
           'You decide to never leave the elevator, as the thought of even stepping outside \nthe elevator absolutely petrifies you.\nTHE END. (Try Again!) ')
     exit()
-
 print('You have decided to leave the elevator. It was getting cramped in here anyway. You see three buttons on the elevator.')
 elevator_floor=str(input("What floor?: "))
 while elevator_floor not in ('1', '2', '3') and elevator_floor != '':
@@ -30,6 +36,7 @@ while elevator_floor not in ('1', '2', '3') and elevator_floor != '':
     elevator_floor = str(input("What floor?: "))
 
 
+#Story option 1 (Cave)
 if elevator_floor=='1':
      print("The elevator doors open to reveal a dark, narrow, stony hallway. Due to a lack of \nany other option, you begin to "
            "walk down the hallway. After what feels like hours of walking,\n you eventually reach a light at the end of the tunnel,"
@@ -94,7 +101,7 @@ if elevator_floor=='1':
            'at the end of the tunnel. You make your way to the end of the tunnel, and on the other side is... \nThe exit. \nTHE END')
      exit()
 
-
+#Story option 2 (Forest)
 elif elevator_floor=='2':
     print("The elevator doors open, and you see what seems to be a foggy forest. \nYou are unsettled, but you proceed."
           "You reach a river long enough that you cannot walk across. \nThere appears to be a bridge a bit farther upstream. "
@@ -172,7 +179,7 @@ elif elevator_floor=='2':
         exit()
 
 
-
+#Story option 3 (office)
 elif elevator_floor=='3':
     print("The elevator doors open up to the 57th floor of what appears to be an office \nbuilding. You wonder how you wound up"
           "on the 57th floor even though there are only \nthree buttons on the elevator. You shrug it off and walk into the office. "
